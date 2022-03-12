@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProductPage {
 	WebDriver driver;
-	private By dropSearchBox = By.xpath("//div//li[@class='ac_even ac_over']");
+	private By dropSearchBox = By.xpath("//div[@class='ac_results']//li");
 	private By SearchTextBox = By.xpath("//input[@id='search_query_top']");
 	private static final Logger logger = LogManager.getLogger(ProductPage.class);
 	public ProductPage(WebDriver driver) {
