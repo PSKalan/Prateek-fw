@@ -21,10 +21,9 @@ public class ProductPage {
 	public String Product_drop_Down(String product) {
 
 		Actions act = new Actions(driver);
+	    act.moveToElement(driver.findElement(SearchTextBox)).moveToElement(driver.findElement(dropSearchBox)).build().perform();
 		WebDriverWait wait = new WebDriverWait(driver,20);
 		wait.until(ExpectedConditions.presenceOfElementLocated(dropSearchBox));
-		act.moveToElement(driver.findElement(SearchTextBox)).moveToElement(driver.findElement(dropSearchBox)).build().perform();
-		
 		return driver.findElement(dropSearchBox).getText();
 		
 	}
